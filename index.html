@@ -19,21 +19,23 @@
     />
 
     <!-- Google Fonts CDN Link -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Genos:wght@500&family=Ysabeau+SC:wght@300&display=swap" rel="stylesheet">
 
     <!-- Custom CSS Link -->
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
-  <body>
-    <header class="p-5 mb-4 border-5 border-bottom border-dark text-center">
+  <body class="dark">
+    <header class="p-5 mb-4 border-5 border-bottom border-light text-center">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <nav>
+        <button id="clearBtn">Clear</button>
+      </nav>
     </header>
     <div class="container-lg px-5">
 
