@@ -1,14 +1,15 @@
+//
 var today = dayjs();
-console.log(dayjs().format('h'));
-console.log(dayjs().hour());
+
 var currentHour = today.hour();
 
 var timeBlockEl = $(".time-block");
 var saveButtonEl = $(".saveBtn");
 
 // Shorthand for $(document).ready(function() { ... });
-// Ensures your functions are called once all the DOM elements have finished rendering.
+// This Function Ensures functions within are called once all the DOM elements have finished rendering.
 $(function () {
+
   timeBlockEl.on("click", ".saveBtn", function () {
     var selectedTimeBlockEl = $(this).parent();
     var selectedTimeBlockId = $(selectedTimeBlockEl).attr("id");
@@ -31,7 +32,7 @@ $(function () {
     }
 
     var getBlockId = $(timeBlockEl[i]).attr("id")
-    console.log(getBlockId);
+
 
     
     var storedData = JSON.parse(localStorage.getItem(getBlockId))
