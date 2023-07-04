@@ -2,9 +2,10 @@
 var today = dayjs();
 var currentHour = today.hour();
 
-// Created variables to target our Time-Block container and Save Buttons.
+// Created variables to target our Time-Block container, Save Buttons and Clear Button.
 var timeBlockEl = $(".time-block");
 var saveButtonEl = $(".saveBtn");
+var clearBtn = $("#clearBtn");
 
 // Shorthand for $(document).ready(function() {});
 // This Function Ensures functions within are called once all the DOM elements have finished rendering.
@@ -19,9 +20,20 @@ $(function () {
     var inputValue = selectedTextEl.val();
     // The ID of the current parent element will be stored in this variable.
     var selectedTimeBlockId = $(selectedTimeBlockEl).attr("id");
+
     // The user's input is saved in localstorage.
     // The current element's ID is used as the *KEY* for the user's input.
     localStorage.setItem(selectedTimeBlockId, JSON.stringify(inputValue));
+  });
+
+  // Click on Clear button: Erases local storage and clears our values.
+  clearBtn.on("click", function () {
+    // Clears local storage.
+    localStorage.clear();
+    // Clears values inside our text areas.
+    for (var i = 0; i < timeBlockEl.length; i++) {
+      $(timeBlockEl[i]).children().eq(1).val(null);
+    }
   });
 
   // Created loop to iterate over all of our time blocks.

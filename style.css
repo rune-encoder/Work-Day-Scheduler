@@ -3,12 +3,47 @@ body {
   font-size: 16px;
 }
 
+h1 {
+  font-family: 'Ysabeau SC', sans-serif;
+}
+
+.dark {
+  background-color: black;
+  color: whitesmoke;
+}
+
+header p,
+header nav {
+  font-family: 'Agdasima', sans-serif;
+  line-height: 1.2;
+}
+
+#clearBtn {
+  margin: 5px;
+  padding: 5px;
+  width: 25%;
+  border: none;
+  background-color: #757474;
+  opacity: 95%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: #f8fcfc;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  outline: 0.1px solid;
+}
+
 textarea {
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
   border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   padding: 10px;
 }
 
@@ -17,31 +52,40 @@ textarea {
 }
 
 .time-block {
+  font-family: 'Genos', sans-serif;
+  font-size: 115%;
   border-radius: 15px;
 }
 
 .row {
-  border-top: 1px solid white;
+  margin-top: 3px;
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed #000000;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .past {
-  background-color: #d3d3d3;
+  /* background-color: #d3d3d3; */
+  background: radial-gradient(circle, rgba(53,64,105,1) 0%, rgb(238, 238, 238) 0%, rgba(211,211,211,1) 100%);
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  /* background-color: #ff6961; */
+  background: radial-gradient(circle, rgba(53,64,105,1) 0%, rgb(206, 147, 135) 0%, rgba(255,105,97,1) 100%);
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  /* background-color: #77dd77; */
+  background: radial-gradient(circle, rgba(53,64,105,1) 0%, rgb(184, 250, 184) 0%, rgba(119,221,119,1) 100%);
   color: white;
 }
 
@@ -49,7 +93,8 @@ textarea {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  /* background-color: #06aed5; */
+  background: radial-gradient(circle, rgba(53,64,105,1) 0%, rgb(121, 206, 245) 0%, rgba(6,174,213,1) 100%);
   color: white;
 }
 
