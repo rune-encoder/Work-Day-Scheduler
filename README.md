@@ -22,7 +22,7 @@ N/A
 
 ## Usage
 
-Navagate to the Webpage using the following link: https://rune-encoder.github.io/Code-Quiz/
+Navagate to the Webpage using the following link: rune-encoder.github.io/Work-Day-Scheduler/
 
 **To start follow these steps:**
 
