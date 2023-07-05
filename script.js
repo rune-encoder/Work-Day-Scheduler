@@ -2,7 +2,7 @@
 var today = dayjs();
 var currentHour = today.hour();
 
-// Created variables to target our Time-Block container, Save Buttons and Clear Button.
+// Variables Target our Time-Block container, Save Buttons and Clear Button.
 var timeBlockEl = $(".time-block");
 var saveButtonEl = $(".saveBtn");
 var clearBtn = $("#clearBtn");
@@ -10,47 +10,51 @@ var clearBtn = $("#clearBtn");
 // Shorthand for $(document).ready(function() {});
 // This Function Ensures functions within are called once all the DOM elements have finished rendering.
 $(function () {
-  // Event listens for a click on any of our Save Buttons.
+  // Click on Save Button: Save input value in a Key in Local Storage.
   timeBlockEl.on("click", ".saveBtn", function () {
-    // Variable targets the parent element of the save button.
+    // Target: Container containing the clicked save button.
     var selectedTimeBlockEl = $(this).parent();
-    // Variable targets the textarea in the container.
+    // Target: Text Area
     var selectedTextEl = $(selectedTimeBlockEl.children().eq(1));
-    // The user's input inside the text area is saved as a variable.
+    // The User's input in Text Area is saved as a variable.
     var inputValue = selectedTextEl.val();
-    // The ID of the current parent element will be stored in this variable.
+    // Store ID of Container holding Text Area. 
     var selectedTimeBlockId = $(selectedTimeBlockEl).attr("id");
 
-    // The user's input is saved in localstorage.
-    // The current element's ID is used as the *KEY* for the user's input.
+    // The following saves the User's Input in Local Storage.
+    // The container's ID is used as the key to store the User's Input Value.
     localStorage.setItem(selectedTimeBlockId, JSON.stringify(inputValue));
   });
 
-  // Click on Clear button: Erases local storage and clears our values.
+  // Click on Clear button: Clears Local Storage and User Input Values.
   clearBtn.on("click", function () {
-    // Clears local storage.
     localStorage.clear();
-    // Clears values inside our text areas.
     for (var i = 0; i < timeBlockEl.length; i++) {
       $(timeBlockEl[i]).children().eq(1).val(null);
     }
   });
 
-  // Created loop to iterate over all of our time blocks.
+  // Goes through all of our Elements with the Class: time-block.
   for (var i = 0; i < timeBlockEl.length; i++) {
-    // Obtains the hour in military time of our time block using it's ID.
+    // Obtains the hour of our elements using it's ID.
     var listTime = $(timeBlockEl[i]).attr("id").substr(5);
 
-    // Compares our time-block hour to the current hour and modifies it's class accordingly.
+    // Compares the Time-Block Element's hour to the Current hour and adds the appropriate class changing it's background.
     if (listTime < currentHour) {
       $(timeBlockEl[i]).addClass("past");
+      $(timeBlockEl[i]).removeClass("present");
+      $(timeBlockEl[i]).removeClass("future");
     } else if (listTime == currentHour) {
+      $(timeBlockEl[i]).removeClass("past");
       $(timeBlockEl[i]).addClass("present");
+      $(timeBlockEl[i]).removeClass("future");
     } else {
+      $(timeBlockEl[i]).removeClass("past");
+      $(timeBlockEl[i]).removeClass("present");
       $(timeBlockEl[i]).addClass("future");
     }
 
-    // Gets the ID of the iterated time block container.
+    // Retrieves the ID of the iterated time block container.
     var getBlockId = $(timeBlockEl[i]).attr("id");
 
     // Gets the value stored in our stored data using the iterated ID as a key.

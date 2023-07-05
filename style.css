@@ -1,21 +1,35 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
 
 h1 {
-  font-family: 'Ysabeau SC', sans-serif;
+  font-family: "Ysabeau SC", sans-serif;
 }
 
-.dark {
-  background-color: black;
+header div {
+  background: #485563;
+  background: -webkit-linear-gradient(to right, #29323c, #485563);
+  background: linear-gradient(to right, #29323c, #485563);
+  opacity: 95%;
+  box-shadow: 0px 2px 16px 3px rgba(255, 255, 255, 0.62);
+}
+
+.background {
+  background: #c04848;
+  background: -webkit-linear-gradient(to right, #480048, #c04848);
+  background: linear-gradient(to right, #480048, #c04848);
   color: whitesmoke;
 }
 
 header p,
 header nav {
-  font-family: 'Agdasima', sans-serif;
+  font-family: "Agdasima", sans-serif;
   line-height: 1.2;
+}
+
+#currentDay {
+  color: #c04848;
 }
 
 #clearBtn {
@@ -23,17 +37,30 @@ header nav {
   padding: 5px;
   width: 25%;
   border: none;
-  background-color: #757474;
-  opacity: 95%;
+  background: #c04848;
+  background: -webkit-linear-gradient(to right, #480048, #c04848);
+  background: linear-gradient(to right, #480048, #c04848);
+  opacity: 80%;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: #f8fcfc;
+  color: #ffffff;
   font-size: 20px;
   text-align: center;
   cursor: pointer;
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
   outline: 0.1px solid;
+}
+
+#clearBtn:hover {
+  background: #E0EAFC;  
+  background: linear-gradient(to right, #CFDEF3, #E0EAFC); 
+  width: 23%;
+  opacity: 100%;
+  border: 0.5px solid #c04848;
+  outline-color: #c04848;
+  outline-style: initial;
+  outline-offset: 10px;
+  outline-width: 10px;
+  color: #c04848;
 }
 
 textarea {
@@ -52,7 +79,7 @@ textarea {
 }
 
 .time-block {
-  font-family: 'Genos', sans-serif;
+  font-family: "Genos", sans-serif;
   font-size: 115%;
   border-radius: 15px;
 }
@@ -73,19 +100,34 @@ textarea {
 
 .past {
   /* background-color: #d3d3d3; */
-  background: radial-gradient(circle, rgba(53,64,105,1) 0%, rgb(238, 238, 238) 0%, rgba(211,211,211,1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(53, 64, 105, 1) 0%,
+    rgb(238, 238, 238) 0%,
+    rgba(211, 211, 211, 1) 100%
+  );
   color: white;
 }
 
 .present {
   /* background-color: #ff6961; */
-  background: radial-gradient(circle, rgba(53,64,105,1) 0%, rgb(206, 147, 135) 0%, rgba(255,105,97,1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(53, 64, 105, 1) 0%,
+    rgb(206, 147, 135) 0%,
+    rgba(255, 105, 97, 1) 100%
+  );
   color: white;
 }
 
 .future {
   /* background-color: #77dd77; */
-  background: radial-gradient(circle, rgba(53,64,105,1) 0%, rgb(184, 250, 184) 0%, rgba(119,221,119,1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(53, 64, 105, 1) 0%,
+    rgb(184, 250, 184) 0%,
+    rgba(119, 221, 119, 1) 100%
+  );
   color: white;
 }
 
@@ -93,12 +135,24 @@ textarea {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  /* background-color: #06aed5; */
-  background: radial-gradient(circle, rgba(53,64,105,1) 0%, rgb(121, 206, 245) 0%, rgba(6,174,213,1) 100%);
+  background: #485563;
+  background: linear-gradient(to right, #29323c, #485563);
   color: white;
+}
+
+.saveBtn:hover {
+  background: #E0EAFC;  
+  background: linear-gradient(to right, #CFDEF3, #E0EAFC); 
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.saveBtn:active,
+#clearBtn:active {
+  background: #485563;
+  background: linear-gradient(to right, #29323c, #485563);
+  color: #c04848; 
 }
