@@ -22,7 +22,7 @@ N/A
 
 ## Usage
 
-Navagate to the Webpage using the following link: 
+Navagate to the Webpage using the following link: https://rune-encoder.github.io/Code-Quiz/
 
 **To start follow these steps:**
 
