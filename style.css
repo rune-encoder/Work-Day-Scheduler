@@ -9,15 +9,18 @@ h1 {
 
 header div {
   background: #485563;
-  background: -webkit-linear-gradient(to right, #29323c, #485563);
   background: linear-gradient(to right, #29323c, #485563);
-  opacity: 95%;
+  background-image: url(./assets/hero.png),
+    linear-gradient(to right, #29323c, #485563);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: luminosity;
   box-shadow: 0px 2px 16px 3px rgba(255, 255, 255, 0.62);
 }
 
 .background {
   background: #c04848;
-  background: -webkit-linear-gradient(to right, #480048, #c04848);
   background: linear-gradient(to right, #480048, #c04848);
   color: whitesmoke;
 }
@@ -29,6 +32,9 @@ header nav {
 }
 
 #currentDay {
+  background: #485563;
+  background: linear-gradient(to right, #29323c, #485563);
+  box-shadow: 0px 2px 16px 3px rgba(7, 7, 7, 0.25);
   color: #c04848;
 }
 
@@ -51,8 +57,8 @@ header nav {
 }
 
 #clearBtn:hover {
-  background: #E0EAFC;  
-  background: linear-gradient(to right, #CFDEF3, #E0EAFC); 
+  background: #e0eafc;
+  background: linear-gradient(to right, #cfdef3, #e0eafc);
   width: 23%;
   opacity: 100%;
   border: 0.5px solid #c04848;
@@ -99,7 +105,7 @@ textarea {
 }
 
 .past {
-  /* background-color: #d3d3d3; */
+  background: #d3d3d3;
   background: radial-gradient(
     circle,
     rgba(53, 64, 105, 1) 0%,
@@ -110,7 +116,7 @@ textarea {
 }
 
 .present {
-  /* background-color: #ff6961; */
+  background: #ff6961;
   background: radial-gradient(
     circle,
     rgba(53, 64, 105, 1) 0%,
@@ -121,7 +127,7 @@ textarea {
 }
 
 .future {
-  /* background-color: #77dd77; */
+  background: #77dd77;
   background: radial-gradient(
     circle,
     rgba(53, 64, 105, 1) 0%,
@@ -141,8 +147,8 @@ textarea {
 }
 
 .saveBtn:hover {
-  background: #E0EAFC;  
-  background: linear-gradient(to right, #CFDEF3, #E0EAFC); 
+  background: #e0eafc;
+  background: linear-gradient(to right, #cfdef3, #e0eafc);
 }
 
 .saveBtn i:hover {
@@ -154,5 +160,5 @@ textarea {
 #clearBtn:active {
   background: #485563;
   background: linear-gradient(to right, #29323c, #485563);
-  color: #c04848; 
+  color: #c04848;
 }
