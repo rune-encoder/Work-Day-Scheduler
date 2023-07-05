@@ -67,5 +67,5 @@ $(function () {
   }
 
   // This will display the current date onto the Header Paragraph Element.
-  $("#currentDay").text(today.format("dddd, MMMM D"));
+  $("#currentDay").text(today.format("dddd, MMMM D YYYY"));
 });
