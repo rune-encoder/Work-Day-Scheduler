@@ -18,7 +18,7 @@ $(function () {
     var selectedTextEl = $(selectedTimeBlockEl.children().eq(1));
     // The User's input in Text Area is saved as a variable.
     var inputValue = selectedTextEl.val();
-    // Store ID of Container holding Text Area. 
+    // Store ID of Container holding Text Area.
     var selectedTimeBlockId = $(selectedTimeBlockEl).attr("id");
 
     // The following saves the User's Input in Local Storage.
